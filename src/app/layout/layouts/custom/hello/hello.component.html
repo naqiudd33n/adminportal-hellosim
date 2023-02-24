@@ -1,0 +1,90 @@
+<!-- Loading bar -->
+<fuse-loading-bar></fuse-loading-bar>
+
+<!-- Navigation -->
+<fuse-vertical-navigation
+    *ngIf="isScreenSmall"
+    class="dark print:hidden bg-black overflow-y-auto mb-20"
+    [mode]="'over'"
+    [name]="'mainNavigation'"
+    [navigation]="navigation.default"
+    [opened]="!isScreenSmall">
+    <!-- Navigation header hook -->
+    <ng-container fuseVerticalNavigationContentHeader>
+        <div class="flex items-center w-full px-8 pt-8">
+            <!-- Logo -->
+            <div class="flex items-center justify-center">
+                <img
+                    class="w-28"
+                    src="assets/images/logo/hello-logo.png">
+            </div>
+        </div>
+    </ng-container>
+    <!-- Navigation footer hook -->
+    <ng-container fuseVerticalNavigationContentFooter>
+        <div class="flex flex-col items-center justify-center h-16 pr-6 pl-2 my-6 opacity-40">
+            <img
+                class="max-w-36"
+                src="assets/images/logo/hellosim.png">
+            
+            <span class="font-medium text-secondary text-xs">&copy; {{currentYear}} . version {{version}}</span>
+
+        </div>
+    </ng-container>
+</fuse-vertical-navigation>
+<!-- Wrapper -->
+<div class="flex flex-col flex-auto w-full p-6 sm:p-12 md:px-30 md:py-10 h-screen overflow-hidden relative">
+
+    <!-- Background -->
+    <div class="w-full h-full fixed inset-0 z-0">
+        <video class="object-contain" width="100%" height="100%" autoplay loop muted>
+            <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Layout -->
+    <div class="flex flex-col w-full bg-black bg-opacity-25 backdrop-blur-lg rounded-2xl h-full">
+
+        <header class="border-b border-gray-400"></header>
+        <div class="flex flex-row w-full overflow-hidden">
+
+            <!-- Navigation -->
+            <fuse-vertical-navigation
+                class="dark print:hidden bg-transparent overflow-y-auto mb-20"
+                [mode]="'side'"
+                [name]="'navigation'"
+                [navigation]="navigation.default"
+                [opened]="!isScreenSmall">
+                <!-- Navigation header hook -->
+                <ng-container fuseVerticalNavigationContentHeader>
+                    <div class="flex items-center w-full px-8 mt-8">
+                        <!-- Logo -->
+                        <div class="flex items-center justify-center">
+                            <img
+                                class="w-28"
+                                src="assets/images/logo/hello-logo.png">
+                        </div>
+                    </div>
+                </ng-container>
+                <!-- Navigation footer hook -->
+                <ng-container fuseVerticalNavigationContentFooter>
+                    <div class="flex flex-col items-center justify-center h-16 pr-6 pl-2 mb-40 opacity-40">
+                        <img
+                            class="max-w-36"
+                            src="assets/images/logo/hellosim.png">
+                        
+                        <span class="font-medium text-secondary text-xs">&copy; {{currentYear}} . version {{version}}</span>
+
+                    </div>
+                </ng-container>
+            </fuse-vertical-navigation>
+
+            <!-- Content -->
+            <div class="w-full p-4 overflow-y-auto">
+                <router-outlet *ngIf="true"></router-outlet>
+            </div>
+        </div>
+    </div>
+
+</div>

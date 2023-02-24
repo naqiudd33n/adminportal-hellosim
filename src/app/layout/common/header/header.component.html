@@ -1,0 +1,38 @@
+<div class="w-full flex flex-row bg-transparent items-center justify-between h-14 p-2 px-4 rounded-t-2xl">
+    <!-- Navigation toggle button -->
+    <button
+        mat-icon-button
+        class="visible md:invisible"
+        (click)="toggleNavigation('mainNavigation')">
+        <mat-icon class="text-white" [svgIcon]="'heroicons_outline:menu'"></mat-icon>
+    </button>
+    <!-- User -->
+    <div class="flex flex-row items-center">
+        <div class="relative w-10 h-10">
+            <img
+                class="w-full h-full rounded-full"
+                *ngIf="user.avatar"
+                [src]="user.avatar"
+                alt="User avatar">
+            <mat-icon
+                class="icon-size-24"
+                *ngIf="!user.avatar"
+                [svgIcon]="'heroicons_solid:user-circle'"></mat-icon>
+        </div>
+        <span class="text-gray-200 px-4">
+            <p>{{user.name}}</p>
+            <p class="text-sm">{{user.email}}</p>
+        </span>
+        <user class="flex justify-center" [showAvatar]="false"></user>
+
+        <!-- <div class="dropdown dropdown-end">
+            <label tabindex="0">
+                <mat-icon class="text-gray-200 items-center flex justify-center" [svgIcon]="'heroicons_solid:chevron-down'"></mat-icon>
+            </label>
+            <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-5">
+              <li><a>Item 1</a></li>
+              <li><a>Sign Out</a></li>
+            </ul>
+        </div> -->
+    </div>
+</div>

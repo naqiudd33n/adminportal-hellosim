@@ -1,0 +1,107 @@
+<div class="flex flex-col w-full">
+    <!-- Banners Upload -->
+    <div class="flex flex-col w-full bg-card bg-opacity-40 rounded-lg h-auto p-4 ">
+
+        <div class="w-full flex flex-col md:flex-row gap-4 h-full">
+            <!-- <div class="flex flex-col  md:w-2/5">
+                <div class="w-full h-40 flex flex-col justify-center items-center rounded-lg bg-black bg-opacity-60 cursor-pointer">
+                    <input
+                        id="add-banner-desktop-btn"
+                        class="absolute h-0 w-0 opacity-0 invisible pointer-events-none"
+                        type="file"
+                        (change)="selectFiles($event)"
+                        accept="image/*" multiple 
+                        [multiple]="false"
+                        >
+                    <label
+                        class="ease-in-out duration-300 group-hover:scale-105 flex items-center justify-center w-full h-full rounded-full cursor-pointer flex-col text-white text-center"
+                        for="add-banner-desktop-btn"
+                        matRipple>
+                        <mat-icon
+                            class="icon-size-8 text-white"
+                            [svgIcon]="'heroicons_outline:plus'"></mat-icon>
+                        Drop Files Here
+                    </label> 
+                </div>
+                <div class="bg-red-300 h-full border border-t-0 flex justify-center items-center rounded-b-lg">
+                    <span><a class="text-primary cursor-pointer">Choose File</a> from your Desktop</span>
+                </div>
+            </div> -->
+
+            <!-- Banner DESKTOP  -->
+            <div class="col-span-1 sm:col-span-3 group relative flex flex-col border border-dashed rounded h-80 w-auto border-slate-300 hover:border-slate-500 hover:cursor-pointer items-center justify-center">
+                <!-- Preview  -->
+                <div class="w-full h-3/4 rounded-t px-1 pt-1">
+                    <div class="h-full w-full  justify-center items-center flex">
+                        <!-- <img [src]="this.files[1].fileSource" class="object-cover h-full w-auto" /> -->
+                        <div class="flex justify-center w-full">
+                            <ngx-gallery id="BannerDesktop-NgxGallery" [options]="galleryOptionsBannerDesktop" [images]="this.files[0].galleryImages"></ngx-gallery>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-1/4 rounded-b border-t flex flex-col items-center justify-center p-1">
+                    <div class="flex justify-center items-center w-full h-full">
+                        <input
+                            id="add-banner-desktop-btn"
+                            class="absolute h-0 w-0 opacity-0 invisible pointer-events-none"
+                            type="file"
+                            accept="image/*" multiple 
+                            [multiple]="false"
+                            (change)="selectFiles('BannerDesktopUrl',$event)"
+                            >
+                        <label
+                            class="ease-in-out duration-300 group-hover:scale-105 flex items-center justify-center w-full h-full rounded-full cursor-pointer flex-col text-sm"
+                            for="add-banner-desktop-btn"
+                            matRipple>
+                            <mat-icon
+                                class="icon-size-6"
+                                [svgIcon]="'heroicons_outline:plus'"></mat-icon>Add Store Banner (Desktop)
+                        </label>    
+                    </div>
+                    <span class="text-xs tracking-tight text-gray-400">
+                        *Recommended size: {{files[0].recommendedImageWidth}} x {{files[0].recommendedImageHeight}}px 
+                    </span> 
+                </div>
+            </div>
+
+            <div class="flex flex-col w-full md:w-3/5 gap-2">
+                
+                <div class="h-20 w-full flex flex-auto justify-between">
+                    <div class=" h-full w-72">
+                        <img class="object-cover rounded-lg h-full" src="https://www.sobeys.com/wp-content/uploads/2016/10/INSPIREDDAM_KI1_APPLES_BEAUTY_.jpg" [alt]="''">
+                    </div>
+                    <mat-icon class="text-gray-700 ml-4 cursor-pointer" svgIcon="heroicons_outline:trash"></mat-icon>
+                </div>
+                <div class="h-20 w-full flex justify-between ">
+                    <div class=" h-full w-72 overflow-hidden rounded-lg">
+                        <img class="object-cover rounded-lg h-full" src="https://mrsjsideas.files.wordpress.com/2013/02/massbanan.jpg" [alt]="''">
+                    </div>
+                    <mat-icon class="text-gray-700 ml-4 cursor-pointer" svgIcon="heroicons_outline:trash"></mat-icon>
+                </div>
+                <div class="h-20 w-full flex justify-between ">
+                    <div class=" h-full w-72 overflow-hidden rounded-lg">
+                        <img class="object-cover rounded-lg h-full" src="https://thumbs.dreamstime.com/b/berries-background-banner-strawberries-raspberries-blueberries-173927829.jpg" [alt]="''">
+                    </div>
+                    <mat-icon class="text-gray-700 ml-4 cursor-pointer" svgIcon="heroicons_outline:trash"></mat-icon>
+                </div>
+                <div class="h-20 w-full flex justify-between ">
+                    <div class=" h-full w-72 overflow-hidden rounded-lg">
+                        <img class="object-cover rounded-lg h-full" src="https://as1.ftcdn.net/v2/jpg/02/67/26/04/1000_F_267260464_gMoZQTIL3xpP1E3g8VuVBXPrXeX6GM4m.jpg" [alt]="''">
+                    </div>
+                    <mat-icon class="text-gray-700 ml-4 cursor-pointer" svgIcon="heroicons_outline:trash"></mat-icon>
+                </div>
+                <div class="h-20 w-full flex justify-between ">
+                    <div class=" h-full w-72 overflow-hidden rounded-lg">
+                        <img class="object-cover rounded-lg h-full" src="https://images.squarespace-cdn.com/content/v1/5c92689894d71a4929b9b623/1619684611671-VNPQGPGB3X1PBTW40E5N/guava+seed+oil+blog+banner.jpg?format=1000w" [alt]="''">
+                    </div>
+                    <mat-icon class="text-gray-700 ml-4 cursor-pointer" svgIcon="heroicons_outline:trash"></mat-icon>
+                </div>
+            </div>
+        </div>
+        
+        <button class="mt-6 w-full md:w-2/5" mat-flat-button>
+            <span>Update</span>
+        </button>
+    </div>
+
+</div>

@@ -1,0 +1,9 @@
+{
+    "env": {
+        "name": "dev"
+    },
+    "apiServer": {
+        "helloSimService": "https://api.hellosim.it/admin/v1"
+    },
+    "logging": 0
+}

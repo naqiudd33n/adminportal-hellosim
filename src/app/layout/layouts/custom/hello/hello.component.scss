@@ -1,0 +1,34 @@
+// fuse-vertical-navigation fuse-vertical-navigation-aside-item .fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item,
+// fuse-vertical-navigation fuse-vertical-navigation-basic-item .fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item,
+// fuse-vertical-navigation fuse-vertical-navigation-collapsable-item .fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item,
+// fuse-vertical-navigation fuse-vertical-navigation-divider-item .fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item,
+// fuse-vertical-navigation fuse-vertical-navigation-group-item .fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item,
+// fuse-vertical-navigation fuse-vertical-navigation-spacer-item .fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item {
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-start;
+//     padding: 10px 16px;
+//     font-size: 13px;
+//     font-weight: 500;
+//     line-height: 20px;
+//     text-decoration: none;
+//     border-radius: 50px !important;
+// }
+
+.dark fuse-vertical-navigation-aside-item>.fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item:not(.fuse-vertical-navigation-item-disabled).fuse-vertical-navigation-item-active,
+.dark fuse-vertical-navigation-aside-item>.fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item:not(.fuse-vertical-navigation-item-disabled).fuse-vertical-navigation-item-active-forced,
+.dark fuse-vertical-navigation-basic-item>.fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item:not(.fuse-vertical-navigation-item-disabled).fuse-vertical-navigation-item-active,
+.dark fuse-vertical-navigation-basic-item>.fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item:not(.fuse-vertical-navigation-item-disabled).fuse-vertical-navigation-item-active-forced,
+.dark fuse-vertical-navigation-collapsable-item>.fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item:not(.fuse-vertical-navigation-item-disabled).fuse-vertical-navigation-item-active,
+.dark fuse-vertical-navigation-collapsable-item>.fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item:not(.fuse-vertical-navigation-item-disabled).fuse-vertical-navigation-item-active-forced {
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    --tw-bg-opacity: 0.25 !important;
+}
+
+// fuse-vertical-navigation-aside-item .fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item,
+// fuse-vertical-navigation-basic-item .fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item,
+// fuse-vertical-navigation-collapsable-item .fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item,
+// fuse-vertical-navigation-group-item .fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item {
+//     color: var(--fuse-primary) !important;
+// }
